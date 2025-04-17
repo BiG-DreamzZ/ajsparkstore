@@ -1,1 +1,99 @@
-<!-- suggestion_box.html content based on Boss Hassan's approved structure -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suggestion Box | AJ SPARK</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff4fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(255, 133, 179, 0.15);
+    }
+
+    h1 {
+      text-align: center;
+      color: #d63384;
+    }
+
+    p {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 180px;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-size: 15px;
+      resize: vertical;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #ff85b3;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #e05a91;
+    }
+
+    .thank-you {
+      display: none;
+      margin-top: 25px;
+      padding: 15px;
+      background: #e6f9f0;
+      color: #2d7a58;
+      border-radius: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Suggestion Box</h1>
+    <p>Have an idea to improve AJ SPARK? Tell us!</p>
+    <textarea id="suggestionInput" placeholder="Write your idea here..."></textarea>
+    <button onclick="submitSuggestion()">Send Suggestion</button>
+    <div class="thank-you" id="thankYouMsg">Thanks, Queen! We received your idea!</div>
+  </div>
+
+  <script>
+    function submitSuggestion() {
+      const input = document.getElementById('suggestionInput').value.trim();
+      if (input.length > 0) {
+        document.getElementById('thankYouMsg').style.display = 'block';
+        document.getElementById('suggestionInput').value = '';
+        setTimeout(() => {
+          document.getElementById('thankYouMsg').style.display = 'none';
+        }, 4000);
+      } else {
+        alert("Please enter a suggestion before submitting.");
+      }
+    }
+  </script>
+</body>
+</html>
