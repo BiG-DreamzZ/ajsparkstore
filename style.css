@@ -1,1 +1,57 @@
-<!-- style.css content based on Boss Hassan's approved structure -->
+/* AJ Spark Main Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffe6f0, #fff5fb);
+  font-family: 'Segoe UI', sans-serif;
+  color: #2c003e;
+}
+
+/* Navbar / Header */
+header {
+  background: #ff85b3;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Shop Section */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-box {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.product-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 133, 179, 0.3);
+}
+
+/* Footer */
+footer {
+  background: #2c003e;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
