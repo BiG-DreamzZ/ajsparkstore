@@ -1,33 +1,67 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJ SPARK Official Store</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #ff4db8; /* AJ Pink */
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      height: 40px;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      padding: 0.3rem 0.8rem;
+      border-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex-grow: 1;
+      margin: 0 1rem;
+    }
+    .search-bar input {
+      border: none;
+      outline: none;
+      flex: 1;
+    }
+    .search-bar img {
+      width: 20px;
+      margin-left: 10px;
+    }
+    .banner {
+      background: linear-gradient(to right, #ffc0cb, #ff99cc);
+      text-align: center;
+      padding: 1rem;
+      animation: bannerFade 10s infinite alternate;
+      font-weight: bold;
+    }
+    @keyframes bannerFade {
+      0% { opacity: 1; }
+      100% { opacity: 0.7; }
+    }
+  </style>
 </head>
 <body>
+  <!-- Header with Logo and Search Bar -->
   <header>
-    <h1>Welcome to AJ SPARK</h1>
-    <p>Your one-stop store for nail accessories & beauty</p>
-  </header>
-
-  <section class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/200" alt="Sample Product" />
-      <h3>Gorgeous Nail Kit</h3>
-      <p class="price">₦6,500</p>
+    <img src="logo.png" alt="AJ SPARK Logo" class="logo">
+    <div class="search-bar">
+      <input type="text" placeholder="Search products...">
+      <img src="camera-icon.png" alt="Image Search">
     </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/200" alt="Sample Product" />
-      <h3>Sparkle Polish Set</h3>
-      <p class="price">₦4,200</p>
-    </div>
-    <!-- You can add more products here -->
-  </section>
-
-  <footer>
-    <p>&copy; 2025 AJ SPARK. All rights reserved.</p>
-  </footer>
-</body>
+  </header>  <!-- Banner Section -->  <div class="banner">
+    Nationwide Delivery + Free Gift When You Order Above ₦100k!
+  </div>  <!-- Coming Next: Category Bar + Flash Sale Strip --></body>
 </html>
