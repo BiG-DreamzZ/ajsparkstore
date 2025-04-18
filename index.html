@@ -1,99 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AJ SPARK Product Card</title>
-  <style>
-    body {
-      background-color: #fff0f5;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .product-card {
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      width: 240px;
-      padding: 20px;
-      text-align: center;
-      position: relative;
-      transition: transform 0.3s ease;
-    }
-    .product-card:hover {
-      transform: scale(1.03);
-    }
-    .product-image {
-      width: 100%;
-      border-radius: 16px;
-    }
-    .product-title {
-      font-weight: bold;
-      font-size: 18px;
-      color: #333;
-      margin-top: 12px;
-    }
-    .price-section {
-      margin-top: 5px;
-    }
-    .old-price {
-      font-size: 12px;
-      text-decoration: line-through;
-      color: #888;
-    }
-    .new-price {
-      font-size: 20px;
-      font-weight: bold;
-      color: #d63384;
-    }
-    .icon-buttons {
-      margin-top: 10px;
-    }
-    .icon-buttons i {
-      font-size: 20px;
-      margin: 0 10px;
-      color: #ff69b4;
-      background: #fff0f5;
-      border-radius: 50%;
-      padding: 10px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    .icon-buttons i:hover {
-      background: #d63384;
-      color: white;
-      transform: scale(1.2);
-    }
-    .stock-tag {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      background-color: #e60023;
-      color: white;
-      padding: 4px 8px;
-      font-size: 10px;
-      border-radius: 4px;
-    }
-  </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AJ SPARK Official Store</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="product-card">
-    <div class="stock-tag">Only 3 Left</div>
-    <img src="https://via.placeholder.com/240x200" alt="Product Image" class="product-image" />
-    <div class="product-title">Shiny Gel Polish</div>
-    <div class="price-section">
-      <div class="old-price">₦4,000</div>
-      <div class="new-price">₦2,500</div>
+<body>  <!-- Header with Logo and Search -->  <header class="top-header">
+    <div class="logo-container">
+      <img src="spark_20241225_164925_0000.png" alt="AJ SPARK Logo" class="logo-img" />
     </div>
-    <div class="icon-buttons">
-      <i class="fas fa-shopping-cart"></i>
-      <i class="fas fa-heart"></i>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products, brands..." />
+      <button class="camera-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="camera" />
+      </button>
     </div>
-  </div>
-</body>
+  </header>  <!-- Promo Banner -->  <section class="promo-banner">
+    <p>Nationwide Delivery • Free Gift When You Order Above ₦100K!</p>
+  </section>  <!-- Flash Sale Section -->  <section class="flash-sale">
+    <h2>FLASH SALES</h2>
+    <div class="flash-grid">
+      <div class="product-box hot">
+        <span class="stock-label">Only 3 Left!</span>
+        <img src="https://via.placeholder.com/200" alt="Product Image" />
+        <h3>Shiny Gel Polish</h3>
+        <p class="old-price">₦3,000</p>
+        <p class="new-price">₦2,500</p>
+      </div>
+      <!-- More product-box items can be added below -->
+    </div>
+  </section></body>
 </html>
