@@ -1,67 +1,46 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AJ SPARK Official Store</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff;
-      overflow-x: hidden;
-    }
-    header {
-      background-color: #ff4db8; /* AJ Pink */
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      height: 40px;
-    }
-    .search-bar {
-      display: flex;
-      align-items: center;
-      background: #fff;
-      padding: 0.3rem 0.8rem;
-      border-radius: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      flex-grow: 1;
-      margin: 0 1rem;
-    }
-    .search-bar input {
-      border: none;
-      outline: none;
-      flex: 1;
-    }
-    .search-bar img {
-      width: 20px;
-      margin-left: 10px;
-    }
-    .banner {
-      background: linear-gradient(to right, #ffc0cb, #ff99cc);
-      text-align: center;
-      padding: 1rem;
-      animation: bannerFade 10s infinite alternate;
-      font-weight: bold;
-    }
-    @keyframes bannerFade {
-      0% { opacity: 1; }
-      100% { opacity: 0.7; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header with Logo and Search Bar -->
-  <header>
-    <img src="logo.png" alt="AJ SPARK Logo" class="logo">
-    <div class="search-bar">
-      <input type="text" placeholder="Search products...">
-      <img src="camera-icon.png" alt="Image Search">
+  <header style="background-color: #ff69b4; padding: 20px; text-align: center;">
+    <!-- AJ SPARK Logo -->
+    <img src="spark_20241225_164925_0000.png" alt="AJ SPARK Logo" style="height: 60px; margin-bottom: 10px;" />
+    
+    <h1 style="color: white;">Welcome to AJ SPARK</h1>
+    <p style="color: white;">Your one-stop store for nail accessories & beauty</p>
+  </header>
+
+  <!-- Search bar -->
+  <div style="text-align: center; margin: 20px;">
+    <input type="text" placeholder="Search products..." style="padding: 10px; width: 60%; border-radius: 10px; border: 1px solid #ccc;" />
+  </div>
+
+  <!-- Promotional banner -->
+  <div style="text-align: center; background-color: #ffccff; padding: 10px;">
+    <strong>Nationwide Delivery • Free Gift When You Order Above ₦100k!</strong>
+  </div>
+
+  <!-- Product section -->
+  <section class="products" style="display: flex; justify-content: space-around; flex-wrap: wrap; padding: 30px;">
+    <div class="product" style="text-align: center;">
+      <img src="https://via.placeholder.com/200" alt="Sample Product" />
+      <h3>Gorgeous Nail Kit</h3>
+      <p class="price">₦6,500</p>
     </div>
-  </header>  <!-- Banner Section -->  <div class="banner">
-    Nationwide Delivery + Free Gift When You Order Above ₦100k!
-  </div>  <!-- Coming Next: Category Bar + Flash Sale Strip --></body>
+    <div class="product" style="text-align: center;">
+      <img src="https://via.placeholder.com/200" alt="Sample Product" />
+      <h3>Sparkle Polish Set</h3>
+      <p class="price">₦6,200</p>
+    </div>
+  </section>
+
+  <footer style="text-align: center; padding: 20px; background-color: #eee;">
+    <p>&copy; 2025 AJ SPARK. All rights reserved.</p>
+  </footer>
+</body>
 </html>
