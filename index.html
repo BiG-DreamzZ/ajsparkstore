@@ -1,152 +1,130 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AJ SPARK Official Store</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AJ SPARK Shop</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #fff0f5;
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
     }
-    .top-header {
-      background-color: #ff69b4;
+
+    .category-strip {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-      flex-wrap: wrap;
-    }
-    .logo-img {
-      height: 60px;
-    }
-    .search-bar {
-      display: flex;
-      align-items: center;
-      background-color: white;
-      border-radius: 8px;
-      padding: 5px 10px;
-      width: 100%;
-      max-width: 400px;
-      margin-top: 10px;
-    }
-    .search-bar input {
-      border: none;
-      flex: 1;
+      overflow-x: auto;
       padding: 10px;
-      font-size: 14px;
-    }
-    .search-bar input:focus {
-      outline: none;
-    }
-    .camera-btn img {
-      height: 20px;
-      width: 20px;
-    }
-    .promo-banner {
-      background-color: #ffccf5;
-      text-align: center;
-      padding: 10px;
-      color: #990066;
-      font-weight: bold;
-      animation: flash 1.5s infinite alternate;
-    }
-    @keyframes flash {
-      from { opacity: 0.8; }
-      to { opacity: 1; }
-    }
-    .flash-sale {
-      padding: 20px;
-    }
-    .flash-sale h2 {
-      font-size: 22px;
-      color: #ff1493;
-      margin-bottom: 10px;
-    }
-    .flash-grid, .product-grid {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .product-box {
-      background-color: white;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      width: 180px;
-      text-align: center;
-      position: relative;
-      transition: transform 0.2s ease-in-out;
-    }
-    .product-box:hover {
-      transform: scale(1.05);
-    }
-    .stock-label {
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      background-color: red;
-      color: white;
-      font-size: 10px;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    .old-price {
-      font-size: 12px;
-      color: gray;
-      text-decoration: line-through;
-    }
-    .new-price {
-      font-size: 18px;
-      font-weight: bold;
-      color: #ff1493;
-    }
-    .icons {
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
+      background: #fff3fa;
       gap: 10px;
+      border-bottom: 1px solid #eee;
     }
-    .icons img {
-      width: 20px;
-      height: 20px;
-      cursor: pointer;
+
+    .category-strip button {
+      padding: 8px 16px;
+      border: none;
+      background: #ffd6ec;
+      border-radius: 20px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: background 0.3s ease;
+    }
+
+    .category-strip button.active,
+    .category-strip button:hover {
+      background: #ff4da6;
+      color: white;
+    }
+
+    .cat-icon {
+      width: 16px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    .main-section {
+      padding-bottom: 80px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      box-shadow: 0 -1px 8px rgba(0,0,0,0.1);
+      padding: 6px 0;
+      z-index: 999;
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 12px;
+      color: #222;
+      text-decoration: none;
+    }
+
+    .nav-item img {
+      width: 24px;
+      margin-bottom: 4px;
+    }
+
+    .nav-item.active span {
+      color: #ff4da6;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <!-- Header with Logo and Search -->
-  <header class="top-header">
-    <div class="logo-container">
-      <img src="spark_20241225_164925_0000.png" alt="AJ SPARK Logo" class="logo-img" />
-    </div>
-    <div class="search-bar">
-      <input type="text" placeholder="Search for products, brands..." />
-      <button class="camera-btn">
-        <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="camera" />
-      </button>
-    </div>
-  </header>  <!-- Promo Banner -->  <section class="promo-banner">
-    <p>Nationwide Delivery • Free Gift When You Order Above ₦100K!</p>
-  </section>  <!-- Flash Sale Section -->  <section class="flash-sale">
-    <h2>FLASH SALES</h2>
-    <div class="flash-grid">
-      <div class="product-box hot">
-        <span class="stock-label">Only 3 Left!</span>
-        <img src="https://via.placeholder.com/200" alt="Product Image" />
-        <h3>Shiny Gel Polish</h3>
-        <p class="old-price">₦3,000</p>
-        <p class="new-price">₦2,500</p>
-        <div class="icons">
-          <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="Add to Cart" title="Add to Cart" />
-          <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Watchlist" title="Add to Watchlist" />
-          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Quick View" title="Quick View" />
-        </div>
-      </div>
-      <!-- Add more products as needed -->
-    </div>
-  </section>
+
+  <!-- CATEGORY BAR -->
+  <div class="category-strip">
+    <button class="active"><img src="icons/all-icon.png" alt="All" class="cat-icon"/> All</button>
+    <button>Nail Kits</button>
+    <button>Gel Polish</button>
+    <button>Press-Ons</button>
+    <button>Decorations</button>
+    <button>Tools</button>
+  </div>
+
+  <!-- MAIN AREA -->
+  <div class="main-section">
+    <h2>Welcome to AJ SPARK</h2>
+    <p>This is your new mobile-first homepage layout. More is coming!</p>
+  </div>
+
+  <!-- BOTTOM NAVIGATION -->
+  <div class="bottom-nav">
+    <a href="#" class="nav-item active">
+      <img src="icons/update.png" alt="Update"/>
+      <span>Update</span>
+    </a>
+    <a href="#" class="nav-item">
+      <img src="icons/shop.png" alt="Shop"/>
+      <span>Shop</span>
+    </a>
+    <a href="#" class="nav-item">
+      <img src="icons/cart.png" alt="Cart"/>
+      <span>Cart</span>
+    </a>
+    <a href="#" class="nav-item">
+      <img src="icons/track.png" alt="Track"/>
+      <span>Track</span>
+    </a>
+    <a href="#" class="nav-item">
+      <img src="icons/account.png" alt="Account"/>
+      <span>Account</span>
+    </a>
+    <a href="#" class="nav-item">
+      <img src="icons/support.png" alt="Support"/>
+      <span>Support</span>
+    </a>
+  </div>
+
 </body>
 </html>
